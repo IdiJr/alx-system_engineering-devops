@@ -16,6 +16,10 @@ This depository contains scripts for executing alias, variables, and expansions.
 * [11-binary_to_decimal] (#There are 10 types of people in the world -- Those who understand binary, and those who don't)
 * [12-combinatioms] (#Combinatioms)
 * [13-print_float] (#Floats)
+* [100-decimal_to_hexadecimal] (#Decimal to hexadecimal)
+* [101-rot13] (#Everyone is a proponent of strong encyption)
+* [102-odd] (#The eggs of the brood need to be an odd number)
+* [103-water_and_stir] (#I'm an instant star, just add water and stir)
 
 ### 0-alias
 A script that creates an alias `ls` which runs `rm *`
@@ -58,3 +62,15 @@ A script that prints all possible combinations two letters, except `oo`
 
 ### 13-print_float
 A script that prints a number with two decimal places, followed by a new line
+
+### 100-decimal_to_hexadecimal
+A script that converts base 10 inputs to base 16
+
+### 101-rot13
+A script that encodes and decodes texts using rot13 encryption
+
+### 102-odd
+This script prints every other line from the input starting from the first line
+
+### 103-water_and_stir
+This script adds the values of `WATER` and `STIR`and prints the results
