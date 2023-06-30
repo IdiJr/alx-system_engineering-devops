@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#displays the IP and status code of an apache log file
+
+awk '{printf "%s %s\n", $1, $9}' "apache-access.log"

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#prints number 1 to 100
+#for multiples of 3, prints fizz
+#for multiples of 5, prints buzz
+#for multiples of both 3 and 5, prints fizzbuzz
+
+numb=1
+while [ $numb -lt 101 ]; do
+	if ((numb % 3 == 0 && numb % 5 == 0)); then
+		echo "FizzBuzz"
+	elif ((numb % 5 == 0)); then
+		echo "Buzz"
+	elif ((numb % 3 == 0)); then
+		echo "Fizz"
+	else
+		echo "$numb"
+	fi
+	numb=$((numb+1))
+done
