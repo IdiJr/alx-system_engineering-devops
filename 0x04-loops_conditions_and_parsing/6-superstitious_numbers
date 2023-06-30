@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#prints 1 to 21, but
+#prints 4 and then "bad luck from china" on 4th loop,
+#9 and then "bad luck from japan" on 9th,
+#17 and then "bab luck from italy" on 17th loop
+
+i=1
+while(("$i" < 21)); do
+	echo "$i"
+	case "$i" in
+		4)
+			echo "bad luck from China" ;;
+		9)
+			echo "bad luck from Japan" ;;
+		17)
+			echo " bad luck from Italy" ;;
+	esac
+	((i++))
+done
