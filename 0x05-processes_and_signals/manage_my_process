@@ -2,7 +2,8 @@
 #writes I am alive to /tmp/my_process indefinitely
 #pauses for 2 seconds after every print
 
-while true; do
+while true
+do
 	echo "I am alive!" >> /tmp/my_process
 	sleep 2
 done
