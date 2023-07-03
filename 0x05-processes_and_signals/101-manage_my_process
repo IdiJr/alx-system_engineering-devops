@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 #manages manage_my_process
 
-if [ "$1" == "start" ]
-then
+create()
+{
+	sudo touch /var/run/my_process.pid
+	sudo bash -c echo $$ > /var/run/my_process.pid
+}
+
+if [ "$1" == "start" ]; then
+	create
 	./manage_my_process &
 	echo $$ > /var/run/my_process.pid
 	echo "manage_my_process started"
