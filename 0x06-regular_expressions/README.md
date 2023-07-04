@@ -1,4 +1,4 @@
-# 0x06. Regular expression :light bulb:
+# 0x06. Regular expression :lightbulb:
 This project contains tasks performed to learn the concept of regular expression
 
 ## Background context :book:
