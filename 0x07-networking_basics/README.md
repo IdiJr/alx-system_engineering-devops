@@ -3,6 +3,7 @@ This project was done to learn about the concept of Networking basics
 
 ## Resources
 * Read or watch:
+
 [OSI model](https://intranet.alxswe.com/rltoken/k2uCsynicuNbu1cAQhXqVQ)
 
 [Different types of network](https://intranet.alxswe.com/rltoken/XW3ZGm5Ya_a8XVDXcAKT_A)
