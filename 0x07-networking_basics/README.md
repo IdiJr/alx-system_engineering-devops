@@ -3,7 +3,6 @@ This project was done to learn about the concept of Networking basics
 
 ## Resources
 * Read or watch:
-[0x00-python-hello-world](https://github.com/edward0rtiz/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world)
 [OSI model] (https://intranet.alxswe.com/rltoken/k2uCsynicuNbu1cAQhXqVQ)
 [Different types of network] (https://intranet.alxswe.com/rltoken/XW3ZGm5Ya_a8XVDXcAKT_A)
 [LAN network] (https://intranet.alxswe.com/rltoken/en370-Hrwgi_GUvFcg3bKg)
