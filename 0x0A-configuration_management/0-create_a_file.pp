@@ -2,6 +2,7 @@
 
 file { '/tmp/school':
   path    => '/tmp/school',
+  ensure  => 'present',
   mode    => '0074',
   owner   => 'www-data',
   group   => 'www-data',
