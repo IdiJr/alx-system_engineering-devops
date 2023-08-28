@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Configures local SSH client to connect to server without using password
+Host 54.237.207.191
 IdentityFile ~/.ssh/school
 PasswordAuthentication no
