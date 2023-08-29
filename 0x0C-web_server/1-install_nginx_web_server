@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Installs and configure nginx on my web-01 server
+
+# Updates the server
+sudo apt-get -y update
+
+# Installs the nginx server
+sudo apt-get install -y nginx
+
+# Allows the nginx server to listen to port 80
+sudo sed -i 's/listen 80 default_server;listen 80;/g' /etc/nginx/site-available/default
+
+# Create an HTML page
+echo 'Hello World!' | sudo tee /var/www/html/index.html
+
+# Restarts the nginx server
+sudo service nginx restart
