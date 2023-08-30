@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Configures your Nginx server so that /redirect_me is redirecting to another page
 
-sudo apt-get -y update
+sudo apt-get update
 sudo apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-echo "Hello World!" > /var/www/html/index.html
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Overwrrites the contents of /redirect_me. Redirects to a youtube video
 REPLACEMENT="server_name _;\n\trewrite ^\/redirect_me https:\/\/youtu.be\/nuNvRFOXn3w?si=JvnxyjMZY0E4ifC4 permanent;"
