@@ -10,6 +10,7 @@ sudo chmod -R 777 /etc/nginx
 echo "Hello World!" > /var/www/html/index.html
 
 # Overwrrites the contents of /redirect_me. Redirects to a youtube video
-sed -i '37i\rewrite ^/redirect_me https://youtu.be/nuNvRFOXn3w?si=JvnxyjMZY0E4ifC4 permanent;' /etc/nginx/sites-available/default
+REPLACEMENT="server_name_;\n\trewrite ^\/redirect_me https:\/\/youtu.be\/nuNvRFOXn3w?si=JvnxyjMZY0E4ifC4 permanent;"
+sudo sed -i "s/server_name;/$REPLACEMENT/" /etc/nginx/sites-available/default
 
 sudo service nginx restart
