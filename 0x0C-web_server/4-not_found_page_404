@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # Configures your Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
+sudo apt-get update
 sudo apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-sudo chmod -R 755 /var/www
-sudo chmod -R 777 /etc/nginx
+
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Overwrites the contents of /redirect_me. Redirects to a youtube video
@@ -11,7 +10,7 @@ REPLACEMENT="server_name _;\n\trewrite ^\/redirect_me https:\/\/youtu.be\/nuNvRF
 sudo sed -i "s/server_name;/$REPLACEMENT/" /etc/nginx/sites-available/default
 
 # Creates a custom 404 page
-echo "Ceci n'est pas une page\n" | sudo tee /var/www/html/404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 replacement_string="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html; \n\t\tinternal;\n\t}"
 
 sudo sed -i "s/listen 80 default_server;/$replacement_string/" /etc/nginx/sites-available/default
