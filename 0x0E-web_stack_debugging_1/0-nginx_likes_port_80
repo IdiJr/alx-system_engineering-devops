@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Setup the Nginx server to listen to port 80
+# A Bash script with the minimum number of commands to automate your fix.
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
