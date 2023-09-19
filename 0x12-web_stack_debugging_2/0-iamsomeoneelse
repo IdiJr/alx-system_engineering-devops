@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Accepts and argument and runs whoami command under the argument passed
+if [ $# -eq 0 ]
+then
+  echo "Usage: whoami-as <user>"
+else
+  sudo -u "$1" whoami
+fi
