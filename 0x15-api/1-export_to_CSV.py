@@ -36,9 +36,6 @@ if __name__ == "__main__":
 
     with open(file_name, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-        csv_writer.writerow(
-            ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-        )
 
         for task in todos_data:
             task_id = task.get("id")
