@@ -2,7 +2,7 @@
 """
 This script retrieves and displays TODO list progress for a
 given employee ID using a REST API and exports data in
-the CSV format.
+the JSON format.
 """
 
 import json
