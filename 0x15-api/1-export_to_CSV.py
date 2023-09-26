@@ -5,9 +5,9 @@ given employee ID using a REST API and exports data in
 the CSV format.
 """
 
-import requests
 from sys import argv
 import csv
+import requests
 
 
 if __name__ == "__main__":
