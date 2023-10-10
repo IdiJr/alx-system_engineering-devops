@@ -6,7 +6,7 @@ import requests
 def top_ten(subreddit):
     """ Print the titles of the first 10 hot posts for a given subreddit. """
     headers = {"User-Agent": "CustomUser"}
-    link = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
+    link = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     response = requests.get(link, headers=headers, allow_redirects=False)
     if response.status_code == 404:
         print("None")
