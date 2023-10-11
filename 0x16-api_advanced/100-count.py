@@ -2,8 +2,10 @@
 """ Function to query Reddit API and return sorted count of keywords. """
 import requests
 
+
 def count_words(subreddit, word_list, after="", count=0, counts=None):
-    """ Recursively count and print keywords in hot articles of a subreddit. """
+    """ Recursively count and print keywords
+    in hot articles of a subreddit. """
     if counts is None:
         counts = {}
 
@@ -15,7 +17,8 @@ def count_words(subreddit, word_list, after="", count=0, counts=None):
         "limit": 100
     }
     try:
-        response = requests.get(link, headers=headers, params=params, allow_redirects=False)
+        response = requests.get(link, headers=headers, params=params,
+                                allow_redirects=False)
         if response.status_code == 200:
             data = response.json()
             posts = data['data']['children']
@@ -34,7 +37,8 @@ def count_words(subreddit, word_list, after="", count=0, counts=None):
                 return count_words(subreddit, word_list, after, count, counts)
             else:
                 if len(counts) > 0:
-                    for word, count in sorted(counts.items(), key=lambda x: (-x[1], x[0])):
+                    for word, count in sorted(counts.items(),
+                                              key=lambda x: (-x[1], x[0])):
                         print(f"{word}: {count}")
                 else:
                     print(None)
